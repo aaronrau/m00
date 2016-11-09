@@ -1,0 +1,750 @@
+/*---------------------------------
+
+Msg_input and Participants Selection Control
+
+---------------------------------*/
+
+/* msg_text */
+.msg_text {
+	word-wrap: break-word;
+}
+
+/* msg_input */
+.msg_input {
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+}
+.msg_input .input_text {
+	display: block;
+	box-shadow: none;
+	text-shadow: none;
+	border: 0;
+	background: #ffffff;
+	border-radius: 5px 0px 0px 5px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #676767;
+	height: 30px;
+	padding: 6px 10px 6px;
+	margin: 9px 0px 0px;
+	border: 1px solid #dcdcdc;
+	position: relative;
+	-webkit-appearance: none;
+}
+.msg_input .btPost {
+    height: 30px;
+    line-height: 30px;
+    width: 56px;
+    float: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    background: #00b8f0;
+    border-radius: 0px 5px 5px 0px;
+    margin: 9px 0px 0px 0px;
+    padding: 0px;
+    text-transform: none;
+}
+.msg_input .btPost:after {
+	content: "Reply";
+}
+.msg_input .sending {
+	font-size: 17px;
+	color: #7e7e8e;
+	font-weight: 100;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+
+}
+
+/* Messaging Page Note Input */
+.msg .msg_input {
+	border-top: 1px solid #cccccc;
+	bottom: 0px;
+	position: fixed;
+	z-index: 11;
+	height: 159px;
+	text-align: center;
+	vertical-align: center;
+}
+.msg .msg_input .input_text {
+	border-right: none;
+	width: 450px;
+	display: inline-block;
+}
+.msg .msg_input .btPost {
+	display: inline-block;
+	float: none;
+}
+.msg .msg_input .btCancel {
+	width:26px;
+	height:26px;
+	display:block;
+	background:url(/images/btn_close_round_grey@2x.png) no-repeat center;
+	background-size: 26px 26px;
+	padding: 0px;
+	top:12px;
+	position: relative;
+	display: inline-block;
+}
+.msg .msg_input .btCancel:hover {
+	opacity: .6;
+}
+.msg .msg_input .sending {
+	width: 100%;
+	text-align: center;
+}
+.msg .msg_input .sending:after {
+	content: "Sending...";
+}
+
+
+/* @ Participants quick select control */
+.participants {
+	width: 100%;
+	padding: 0px 12px 0px 36px;
+	height: 56px;
+	background: #fafafa;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	margin-top: 30px;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	z-index: 1;
+}
+.participants .p_icon {
+	background: #fafafa url(/images/bg_participants@2x.png) no-repeat left 12px center / 24px;
+	width: 41px;
+	z-index: 1;
+	position: absolute;
+	left: 0px;
+	height: 54px;
+}
+.participants .profile {
+	display: inline-block;
+	cursor: pointer;
+	margin: 7px 0px 0px 10px;
+}
+.participants img {
+	width: 40px !important;
+	height: 40px !important;
+	top: auto;
+	border-radius: 100%;
+}
+
+/* Item Popup Note Input */
+.conversation .msg_input {
+	padding: 7px 10px 0px;
+}
+.conversation .msg_input .input_text {
+	width: calc(100% - 56px);
+	border-right: none;
+}
+.conversation .msg_input .sending {
+	font-size: 17px;
+	width: 100%;
+	margin: 0px;
+}
+.conversation .note {
+	display: block;
+	float: left;
+	width: 100%;
+	position: absolute;
+	bottom: 15px;
+}
+
+/* Add to List Popup Note Input */
+.selections .note {
+    position: absolute;
+    bottom: 45px;
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+.selections .note .msg_input{
+    border-top: 1px solid #dcdcdc;
+}
+.selections .note .msg_input .input_text{
+    width: calc(100% - 20px);
+    position: absolute;
+    margin: 9px 0px 0px 10px;
+    border-radius: 5px;
+    left: 0px;
+}
+.selections .participants{
+    bottom: 49px;
+    position: absolute;
+}
+.selections .note .msg_input .btPost{
+    display: none;
+}
+
+/* Hover Over Item Note Input */
+.profile_page .item .hover_controls .note {
+	bottom: -47px;
+	text-align: left;
+	display: block;
+	position: absolute;
+	width: 100%;
+}
+.profile_page .item .hover_controls .note .msg_input {
+	height: 47px;
+}
+.profile_page .item .hover_controls .note .msg_input .input_text{
+    width: calc(100% - 76px);
+    margin-left: 10px;
+    border-right: none;
+    margin-top: 8px;
+}
+.profile_page .item .hover_controls .note .msg_input .btPost {
+	margin-top: 8px;
+}
+.profile_page .item .hover_controls .participants {
+    bottom: 47px;
+    position: absolute;
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+}
+
+/* Expanded List View Note Input */
+.expand_list .notes {
+	margin-top: 15px;
+}
+.expand_list .note {
+	bottom: 14px;
+}
+
+
+/*---------------------------------
+
+Posted Notes / Messages
+
+---------------------------------*/
+
+.message .fullname, .message_reply .fullname  {
+	color: #7e7e8d;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 15px;
+	text-align: left;
+	max-height: 15px;
+	max-width: 175px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.message .username, .message_reply .username {
+	color: #a1aec1;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 13px;
+	max-height: 13px;
+	max-width: 175px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.message .msg_text .username, .message_reply .msg_text .username {
+	font-size: 13.5px;
+	line-height: 15px;
+	display: inline-block;
+	color: #00bf6e;
+	max-height: 15px;
+	margin: 0px 0px -3px 0px;
+}
+.message .profile img, .message_reply .profile img {
+	width: 40px;
+	height: 40px;
+}
+.message .msg_text, .message_reply .msg_text {
+	color: #676767;
+	font-size: 13.5px;
+	font-weight: 400;
+	line-height: 15px;
+	max-width: 300px;
+}
+.message .btReply, .message_reply .btReply {
+	width: 26px;
+	height: 26px;
+	display:block;
+	background:url(/images/btn_reply_small@2x.png) no-repeat center;
+	background-size: 26px 26px;
+	padding: 0px;
+	margin: 0px;
+	float: right;
+}
+.message .btReply:hover, .message_reply .btReply:hover {
+	opacity: .6;
+}
+
+/*---------------------------------
+
+Messages Page
+
+---------------------------------*/
+
+.msg .category ul{
+	margin-top: 7px;
+}
+.msg .category li {
+	color: #a1aec1;
+	font-size: 15px;
+	font-weight: 400;
+}
+.msg .category a:hover {
+	color: #a1aec1;
+	cursor: pointer;
+}
+.msg #scroll_content {
+	padding-bottom: 15px;
+}
+.msg .notification_content {
+	display: block;
+}
+.msg .notification {
+	/*background-color: #DDDDDD;*/
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid #d0d0d0;
+	margin-bottom: 15px;
+	padding: 0px 25% 21px;
+	overflow: hidden;
+
+	/* hack needed to hide blur on iOS devices */
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.msg .notification:before {
+	content: " ";
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	z-index: 1;
+
+	-webkit-filter: blur(3px) saturate(1.5) brightness(0.8);
+	-ms-filter: blur(3px) saturate(1.5) brightness(0.8);
+	filter: blur(3px) saturate(1.5) brightness(0.8);
+}
+.msg .notification:after {
+	content: " ";
+	width: 100%;
+	height: 100%;
+	/*background: url(/images/bg_photo_grad_messages@2x.png) no-repeat;*/
+	background-position: center center;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	z-index: 2;
+}
+.msg .notifications .controls {
+	width: 26px;
+	height: 26px;
+	float: right;
+	display: block;
+	margin: 10px;
+	position: relative;
+	z-index: 3;
+}
+.msg .notification .btDismiss {
+	width:26px;
+	height:26px;
+	display:block;
+	background:url(/images/btn_close_round_white@2x.png) no-repeat center;
+	background-size: 26px 26px;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	z-index: 3;
+	float: right;
+	top: 5px;
+}
+.msg .notification .btDismiss:hover {
+	opacity: .6;
+}
+.msg .notification .title {
+	/*color: #ffffff;*/
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 23px;
+	/*padding: 10px 10px 15px;*/
+	position: relative;
+	z-index: 3;
+	max-width: 256px;
+}
+.msg .notification .notification_content {
+	display: inline-block;
+	z-index: 3;
+	position: relative;
+}
+.msg .notification .message {
+	display: inline-block;
+	width: auto;
+	margin: 0px 80px 15px 20px;
+	border-radius: 5px;
+	background: #ffffff;
+	position: relative;
+	min-width: 320px;
+	min-height: 52px;
+	padding: 4px;
+	float: left;
+	clear: both;
+}
+.msg .notification .message_reply {
+	display: inline-block;
+	width: auto;
+	margin: 0px 80px 15px 35px;
+	border-radius: 5px;
+	background: #ffffff;
+	position: relative;
+	min-width: 200px;
+	min-height: 52px;
+	padding: 4px;
+	float: left;
+	clear: both;
+}
+.msg .notification .message .content, .msg .notification .message_reply .content {
+	display: block;
+}
+.msg .notification .message .profile img, .msg .notification .message_reply .profile img {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-radius: 100%;
+}
+.msg .notification .message .fullname, .msg .notification .message_reply .fullname {
+	display: none;
+}
+.msg .notification .message .username, .msg .notification .message_reply .username {
+	margin-left: 46px;
+	margin-top: 2px;
+	font-size: 12.5px;
+	line-height: 14px;
+	max-height: 14px;
+}
+.msg .notification .message .msg_text .username, .msg .notification .message_reply .msg_text .username {
+	margin: 0px 0px -3px 0px;
+}
+.msg .notification .message .msg_text, .msg .notification .message_reply .msg_text {
+	margin: 4px 10px 8px 46px;
+}
+.msg .notification .message .controls, .msg .notification .message_reply .controls {
+	margin: -4px -4px 0px 0px;
+}
+.msg .notification .btMore {
+	position: absolute;
+	z-index: 3;
+	width: 50px;
+	height: 20px;
+	margin: -8px 25% 8px 0px;
+	background: url(/images/btn_more_arrow@2x.png) no-repeat center;
+	background-size: 50px 20px;
+	padding: 0px;
+	bottom: 0px;
+	right: 11px;
+}
+.msg .notification .btMore:hover {
+	opacity: .6;
+}
+
+
+/*---------------------------------
+
+Notes for Item Pop Up
+
+---------------------------------*/
+
+.conversation {
+	width: 100%;
+	display: block;
+	position: relative;
+	text-align: left;
+	padding: 10px 0px 58px;
+}
+.conversation:before {
+	width: 100%;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 26px;
+	line-height: 16px;
+	text-align: left;
+	padding: 10px;
+	content: "Notes";
+	font-size: 14px;
+	font-weight: 600;
+	color: #7e7e8d;
+	top: 0px;
+	left: 0px;
+}
+.conversation:after {
+	content: " ";
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 3px;
+	background: #e0e0e0;
+	border-bottom: 2px solid #f3f3f3;
+}
+.conversation .controls {
+	width: 26px;
+	height: 26px;
+	display: block;
+	margin-right: 10px !important;
+	position: absolute;
+	right: 0px;
+	top: 12px;
+}
+.conversation .content {
+	position: relative;
+	z-index: 0;
+	margin-top: 15px;
+}
+.conversation .message {
+	width: 100%;
+	display: block;
+	padding-top: 12px;
+	position: relative;
+}
+.conversation .message_reply {
+	width: 100%;
+	display: block;
+	padding-top: 12px;
+	position: relative;
+	padding-left: 38px;
+}
+.conversation .message .controls, .conversation .message_reply .controls {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+}
+.conversation .message .content, .conversation .message_reply .content {
+	margin-top: 0px;
+}
+.conversation .message .profile, .conversation .message_reply .profile {
+	margin-left: 48px;
+	text-align: left;
+}
+.conversation .message .profile img, .conversation .message_reply .profile img {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+.conversation .message .content .fullname, .conversation .message_reply .content .fullname {
+	position: relative;
+}
+.conversation .message .msg_text, .conversation .message_reply .msg_text {
+	text-align: left;
+	margin: 4px 20px 0px 48px;
+	max-width: 100%;
+	padding-bottom: 11px;
+	position: relative;
+	word-wrap: break-word;
+}
+.conversation .message .msg_text:after, .conversation .message_reply .msg_text:after {
+	position: absolute;
+	width: calc(100% + 20px);
+	height: 1px;
+	content: " ";
+	background: #efefef;
+	bottom: 0px;
+	left: 0px;
+	display: block;
+}
+
+
+/*---------------------------------
+
+Profile Photo Follow Button
+
+---------------------------------*/
+
+.notification_content .message .profile .friends_follow, .notification_content .message_reply .profile .friends_follow {
+	top: 2px;
+	left: 48px;
+}
+.message .profile .friends_follow, .message_reply .profile .friends_follow {
+	top: -6px;
+	left: 44px;
+}
+.message .profile .friends_follow .expand, .message_reply .profile .friends_follow .expand {
+	width: 92px;
+	height: 44px;
+	background: #b8c3d3;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	top: auto;
+	left: auto;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+	text-align: center;
+	display: block;
+}
+.message .profile .friends_follow .expand .arrow_left2, .message_reply .profile .friends_follow .expand .arrow_left2 {
+    left: -8px;
+    top: 12px;
+    border-right: 10px solid #b8c3d3;
+}
+.message .profile .friends_follow .expand .btFollow, .message_reply .profile .friends_follow .expand .btFollow {
+	cursor: pointer;
+	width: 72px;
+	height: 24px;
+	background: url(/images/btn_follow@2x.png) no-repeat center;
+	background-size: 72px 24px;
+	padding: 0px;
+	border-radius: 12px;
+}
+.message .profile .friends_follow .expand .btUnFollow, .message_reply .profile .friends_follow .expand .btUnFollow {
+	cursor: pointer;
+	width: 72px;
+	height: 24px;
+	background: url(/images/btn_unfollow@2x.png) no-repeat center;
+	background-size: 72px 24px;
+	padding: 0px;
+	border-radius: 12px;
+}
+.message .profile .friends_follow .button, .message_reply .profile .friends_follow .button {
+	display: none;
+}
+.message .profile .friends_follow .expand .spacing, .message_reply .profile .friends_follow .expand .spacing {
+	display: none;
+}
+.message .profile .fullname, .message .profile .username, .message .profile img, .message_reply .profile .fullname, .message_reply .profile .username, .message_reply .profile img {
+	cursor: pointer;
+}
+
+/* Odd declarations (Josh - Purpose?)*/
+.conversation .content {
+	overflow:visible !important;
+	z-index: inherit !important;
+}
+.notifications .content {
+	overflow:visible !important;
+	z-index: inherit !important;
+}
+.message .content {
+	overflow:visible !important;
+	z-index:inherit !important;
+}
+.message_reply .content {
+	overflow:visible !important;
+	z-index:inherit !important;
+}
+
+
+/*---------------------------------
+
+Large Mobile
+
+---------------------------------*/
+
+@media all and (max-width: 1025px) {
+	/* General */
+	.msg .notification {
+		padding: 0px 15% 21px;
+	}
+	.msg .notification .btMore {
+		margin: -8px 15% 8px 0px;
+	}
+}
+
+/*---------------------------------
+
+Small Mobile
+
+---------------------------------*/
+
+@media all and (max-width: 605px) {
+	/* General */
+	.msg_input {
+		padding-left: 0px;
+	}
+	.msg .msg_input {
+		padding-left: 0px;
+	}
+	.converstation .msg_input .input_text {
+		width: calc(100% - 116px);
+		margin-left: 10px;
+	}
+	.msg .msg_input .input_text {
+		width: calc(100% - 116px);
+		margin-left: 10px;
+	}
+	.msg_input .sending {
+		width: 100%;
+		margin-left: 0px;
+	}
+	.msg .notification {
+		padding: 0px 0px 21px;
+	}
+	.msg .notification .btMore {
+		margin: -8px 0px 8px;
+	}
+	.msg .notification .message .msg_text, .msg .notification .message_reply .msg_text {
+		max-width: 250px;
+	}
+}
+
+@media all and (max-width: 375px) {
+
+	.msg .notification .message .msg_text, .msg .notification .message_reply .msg_text {
+		max-width: 200px;
+	}
+}
+
+/*---------------------------------
+
+Header
+
+---------------------------------*/
+
+.msg .card {
+	/*width: 300px;*/
+	color: #676767;
+	font-size: .8em;
+	display: inline-block;
+	/*width: auto;*/
+	margin: 10px 80px 15px 20px;
+	border-radius: 5px;
+	background: #ffffff;
+	position: relative;
+	min-width: 320px;
+	min-height: 52px;
+	padding: 4px;
+	/*float: left;*/
+	clear: both;
+}
+
+.msg .card img {
+  /*margin-top: 10px;*/
+  width: 20px;
+  height: 20px;
+}
+
+.msg .content {
+	max-width: 800px;
+	margin: 0 auto;
+}

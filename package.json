@@ -1,0 +1,70 @@
+{
+  "name": "interactive-mockup",
+  "version": "0.1.0",
+  "description": "interactive-mockup =============",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^1.4.2",
+    "aws-sdk": "~1.10.0",
+    "body-parser": "^1.12.4",
+    "compression": "^1.6.1",
+    "crypto": "0.0.3",
+    "express": "^4.12.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.11.2",
+    "fb": "~0.7.0",
+    "googleapis": "^2.0.2",
+    "gulp-install": "^0.6.0",
+    "hat": "0.0.3",
+    "kaiseki": "*",
+    "kue": "^0.10.5",
+    "lodash": "^3.10.0",
+    "mongodb": "^2.2.4",
+    "oauth": "^0.9.13",
+    "parse": "^1.7.1",
+    "parse-cloud-express": "^1.1.0",
+    "parse-server": "2.2.7",
+    "parse-server-sendgrid-adapter": "^1.0.0",
+    "promise": "^7.0.1",
+    "redis": "^2.6.0-0",
+    "request": "~2.54.0",
+    "sendgrid": "^2.0.0",
+    "shortid": "^2.2.6",
+    "socket.io": "^1.4.5",
+    "socket.io-redis": "^1.0.0",
+    "twitter": "^1.2.5",
+    "underscore": "~1.8.2",
+    "url": "^0.11.0",
+    "url2png": "^6.0.2",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-s3": "^0.3.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-watch": "^4.3.5",
+    "yargs": "^4.7.1"
+  },
+  "scripts": {
+    "worker":"node --harmony backend_scaffold/worker.js --worker",
+    "start": "node --harmony backend_scaffold/app.js",
+    "designer": "node --harmony backend_scaffold/app.js --designer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronrau/interactive-mockup"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/aaronrau/interactive-mockup/issues"
+  },
+  "engines": {
+    "node": "5.9.x"
+  }
+}

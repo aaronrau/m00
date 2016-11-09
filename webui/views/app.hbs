@@ -1,0 +1,60 @@
+<script>
+   
+    app.Start({login:{google:true,facebook:true,twitter:true,isOAuthOnly:true},sections:{
+      /*
+      list:{css:"/css/list.css",mods:['list']}
+      ,chat:{css:"/css/chat.css",mods:['chat']}
+      ,calendar:{css:'/scripts/libs/fullcalendar.min.css',mods:['calendar']}
+      ,msg:{css:"/css/msg.css",mods:['msg']}
+      */
+    }},function(){
+
+      Parse.initialize("{{KEYS.APP_ID}}", "{{KEYS.JAVA_SCRIPT}}");
+      Parse.serverURL = '/parse';
+
+      if(!app.User.isLogin())
+      {
+        //window.location = '/login';
+        return true;
+      }
+      else
+      {
+        return true;
+      }
+
+
+    });
+
+</script>
+<body class='home_page'>
+
+
+  <!-- user header controls-->
+  <div class='controls_header'>
+    <div class = 'title_container'>
+      <div class='title' id='header_title'></div>
+    </div>
+    {{#if isLoggedIn}}
+
+    {{/if}}
+    <div class='button' id='btLogin' onclick='loginPopup();'>Login</div>
+    <div class='user_nav'>
+      <!--<div id='username' class=''></div>-->
+      <div id='userprofile' class='myProfile'></div>
+    </div>
+  </div>
+
+  <!-- section categories-->
+  <div id='category'></div>
+  <!-- notification area-->
+  <div id='notification'></div>
+
+  <div id="scroll_content" >
+    <div class='scroll_spacer'></div>
+  </div>
+
+   <!-- section navigation-->
+  <div class='controls_footer'>
+
+  </div>
+</body>

@@ -1,0 +1,7 @@
+{
+  "key": "<aws key>",
+  "secret": "<aws secret>",
+  "bucket": "<bucket>",
+  "region": "us-east-1",
+  "ACL":"public-read"
+}

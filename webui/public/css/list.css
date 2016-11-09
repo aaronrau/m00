@@ -1,0 +1,1512 @@
+.notification {
+    height: 100px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding-top: 65px;
+}
+
+.test_user {
+    float: right;
+
+}
+.test_user .fullname{
+    color: #7e7e8d;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    margin-right: 10px;
+    max-height: 15px;
+    max-width: 175px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.test_user .username{
+    color: #a1aec1;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 11px;
+    margin-right: 10px;
+    max-height: 13px;
+    max-width: 175px;
+    overflow: hidden;
+}
+
+.usersearch{
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    background: transparent;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+  border: 0px none #ffffff;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d1d1;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #d1d1d1;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-track:active {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.list .notification_area{
+    background-color: red;
+    color: white;
+    display: none;
+    height: 20px;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 50;
+    text-align: center;
+}
+
+.list:empty:after{
+    content: "Click +NEW LIST to create a list";
+    color: #7e7e8e;
+    display: block;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 0 auto 0;
+    text-align: center;
+    width: 300px;
+}
+.list .button, .btAddList {
+	float: left;
+	min-height: 27px;
+	min-width: 50px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: center;
+	color: #EEEEEE;
+	font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.list textarea {
+    background: none;
+    border: none;
+    border-width: 0px;
+    resize: none;
+    color: #4d4d57;
+}
+.list textarea:focus{
+    outline: none;
+    border: none;
+    border-width: 0px;
+    color: #4d4d57;
+    
+}
+.list textarea:-moz-read-only { /* For Firefox */
+    outline: none;
+    border: none;
+    border-width: 0px;
+    text-decoration: none;
+    color: #8d8d97;
+    
+}
+.list textarea:read-only { 
+    outline: none;
+    border: none;
+    border-width: 0px;
+    text-decoration: none;
+    color: #8d8d97;
+}
+
+
+.button:hover{
+	opacity: .8;
+	color: rgba(255, 255, 255, .8);
+}
+.btAddList:after{
+	content: "+ New List";
+}
+.btExpand:after{
+	content: "Expand";
+}
+.btShare:after{
+	content: "Share";
+}
+.btAdd:after{
+    content: "+ Add";
+}
+.btAction:after{
+	content: "Add";
+}
+.btEdit:after{
+	content: "Edit";
+}
+
+.btRefresh:after{
+    content: "Refresh";
+}
+.btCapture:after{
+    content: "Capture";
+}
+.btMore .button{
+    background-color: transparent;
+    color: #cacaca;
+    font-size: 20px;   
+}
+.btMore {
+    background-color: transparent;
+    color: #aaaaaa;
+}
+.btMore:after{
+	content: "...";
+}
+.button_expand.btMore:after{
+    content: ""
+}
+
+.background_text{
+	color: #7e7e8e;
+    display: block;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 0 auto 0;
+    text-align: center;
+    width: 200px;
+}
+.list{
+	background-color: #f4f4f4;
+	min-height: 400px;
+	display: block;
+    padding-top: 15px;
+    padding-bottom: 100px;
+}
+.list_preview .button{
+	text-transform: none;
+}
+.list_preview {
+    border-bottom: 1px solid #e1e1e1;
+    display: block;
+    margin: 0 0 15px;
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-bottom: 2px;
+}
+.list_preview .controls {
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: 1;
+    height: 50px;
+    display: block;
+}
+.list_preview .controls .btMore {
+    height: 30px;
+    float: right;
+}
+.list_preview .controls .button_expand {
+    left: 0;
+    width: 70px;
+}
+.list_preview .controls .button_expand .arrow_up2{
+    left: 163px;
+}
+.list_preview .controls .button_expand .expand {
+    left:-135px;
+    top: -2px;
+}
+.list_preview .list_header{
+    display: block;
+    height: auto;
+    padding-top: 0;
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 2px;
+}
+.list_preview .list_header .title{
+
+    display: table-cell;
+    font-size: 19px;
+    font-weight: 700;
+    height: auto;
+    left: auto;
+    line-height: 38px;
+    min-height: 40px;
+    max-height: 40px;
+    max-width: none;
+    overflow: visible;
+    position: relative;
+    top: auto;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+
+}
+.list_preview .items_wrp .items{
+	background: none repeat scroll 0 0 #e3e7ec;
+    display: block;
+	width: 100%;
+	overflow:auto;
+}
+
+
+
+.list_preview .items:empty:after{
+    background: none repeat scroll 0 0 #e3e7ec;
+    border: 2px dashed #b3c1d6;
+    cursor: pointer;
+    display:block !important;
+    height: 234px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 100% !important;
+    content: "Click HERE \A to \A add an item";
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #a1aec1;
+    font-weight: 600;
+    padding: 80px 50px 0px;
+    white-space: pre;
+}
+
+.list_preview .items .list_item {
+    /*table cell is need to make sure item can scroll horizontally without programtically*/
+    display: table-cell;
+    width: 320px;
+    height: auto;
+    position: relative;
+    
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    
+    text-align: left;
+    
+    background: none repeat scroll 0 0 #ffffff;
+    border-bottom: medium none;
+    border-right: 4px solid #f8f8f8;
+    overflow: hidden;
+    vertical-align: top;
+    padding-bottom: 40px;
+}
+.list_preview .items .list_item .item_content_wrp {
+    display: block;
+    max-height: 220px;
+    overflow: hidden;
+    width: 100%;
+}
+.list_preview .items .list_item .item_header {
+    /*need to add width since table cell width doesn't work consistently*/
+    width: 320px;
+}
+.list_preview .items .list_item .title {
+	display: block;
+	width: 100%;
+	height: auto;
+	z-index: 0;
+    color: #5b5b66;
+    left: auto;
+    max-height: none;
+    max-width: none;
+    overflow: visible;
+    padding: 10px 10px 2px 10px;
+    position: relative;
+    text-shadow: none;
+    top: auto;
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px
+}
+
+.list_preview .items .list_item .controls {
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+
+.list_preview .list_item .hover_controls .controls{
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    height: 50px;
+}
+
+.list_preview .list_item .hover_controls .controls .controls_left{
+	float: left;
+    width: auto;
+    height: 50px;
+}
+.list_preview .list_item .hover_controls .controls .controls_right{
+	float: right;
+    width: auto;
+    height: 50px;
+}
+.list_preview .list_item:hover .hover_controls{
+	display: block;
+	cursor:zoom-in;
+}
+.list_preview .list_item .hover_controls {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    /*height: calc(100% - 47px);*/
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.list_preview .list_item .item_preview_content{
+    height: auto;
+    min-height: 180px;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.list_preview .items_wrp{
+	width: 100%;
+	overflow: none;
+	position: relative;
+	display: block;
+	height: auto;
+}
+.list_preview .item_placeholder {
+    background: none repeat scroll 0 0 #e3e7ec;
+    border: 2px dashed #b3c1d6;
+    cursor: pointer;
+    display: block;
+    height: 234px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 290px;
+    float: right;
+}
+.list_preview .item_placeholder .placeholder_text{
+	display: block;
+	height: 234px;
+	width: 290px;	
+}
+.list_preview .item_placeholder .placeholder_text:after {
+    content: "Drag n drop a photo \A or \A tap here to add \A from your device";
+	display: block;
+	width: 100%;
+	margin: 0px;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: #a1aec1;
+	font-weight: 600;
+	padding: 80px 50px 0px;
+	white-space: pre;
+}
+
+.list_preview .item_recent_activity{
+    background-color: #ffffff;
+    bottom: 0;
+    display: block;
+    max-height: 50px;
+    padding:5px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.list_preview .item_recent_activity img{
+    border: 1px solid #dddddd !important;
+    border-radius: 8px;
+    float: left;
+    height: 30px;
+    margin: 0 5px 40px 0;
+    max-height: 30px;
+    max-width: 30px;
+    width: 30px;
+}
+.list_preview .item_recent_activity .description_text{
+    color: #676767;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+}
+/*
+Attachment Specifics Layouts
+*/
+.attachment_text {
+
+}
+.attachment_text .ql-editor{
+    background: #FFFFFF;
+    display: block;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    background: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #676767;
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+    min-height: 200px;
+    position: absolute;
+}
+
+
+.ql-editor-placholder:before{
+    color: #b3b3b1;
+    content: "Add a note...";
+    left: 18px;
+    position: absolute;
+    top: 13px;
+    margin: inherit;
+    padding: inherit;
+    white-space: pre;
+}
+
+
+.attachment_text .item_text_editor_container{
+    background: #FFFFFF;
+    display: block;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    background: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #676767;
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+    min-height: 200px;   
+}
+.attachment_text p{
+  margin-top: 0em;
+  margin-bottom: 0em;
+  line-height: 25px;
+}
+/*Remove buttom arrow since the pointer doesn't move*/
+.medium-editor-element{
+    padding: 5px;
+}
+.medium-editor-element p{
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.medium-editor-element b{
+    font-weight: 600;
+}
+.medium-toolbar-arrow-over:before, .medium-toolbar-arrow-under:after {
+    border-style: none !important
+}
+.medium-editor-placeholder-relative:after, .medium-editor-placeholder:after {
+    color: #b3b3b1 !important;
+    font-style: normal !important;
+    line-height: 25px;
+}
+
+
+.attachment_image{
+    display: block;
+    height: auto;
+    margin: 15px;
+    overflow: visible;
+    width: calc(100% - 15px);
+}
+
+.attachment_image .file_description{
+    padding: 4px;
+    text-align: left;
+    min-height: 20px;
+}
+.attachment_image .file_description:empty:after{
+    content: "Enter a short description here";
+    color: #b3b3b1;
+}
+.attachment_image .file_name{
+    padding-top: 5px;
+    color: #b3b3b1;
+    margin-bottom: 3px;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+}
+.attachment_image .progress .progress-bar-label{
+    display: none;
+}
+.attachment_image .image_container{
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background: #ffffff;
+    display: block;
+    position: relative;
+    overflow: visible;
+}
+.attachment_image .image_container img{
+    margin: 0 auto;
+    max-width:100%;
+    height: auto;
+    cursor: pointer;
+}
+.attachment_image .image_container .controls{
+    z-index: 1;
+    position: absolute;
+    right: 5px;
+    top: -15px;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: none;
+}
+
+.attachment_image .image_container:hover > .controls{
+   display: block;
+}
+
+
+.attachment_image .image_container .controls .btMessages{
+    background-color: transparent;
+    width: 64px;
+    height: 48px;
+    display: block;
+    background: url(/images/btn_messages@2x.png) no-repeat center;
+    background-size: 64px 48px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+.attachment_image.default .item_text_editor_container{
+    display: none;
+}
+.attachment_image.default .progress{
+    display: block;
+    margin: 50px;
+
+}
+
+.attachment_image.completed .progress ,.attachment_image.done .progress {
+    display: none;
+}
+.attachment_image.completed .item_text_editor_container ,.attachment_image.done .item_text_editor_container {
+    display: block;
+}
+
+.attachment_iframe{
+    display: block;
+    height: auto;
+    margin: 10px;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+}
+.attachment_iframe .controls{
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+}
+.attachment_iframe .instructions{
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    color:#aaaaaa;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+}
+
+.attachment_iframe .instructions:after{
+    content: "Not all sites are able to load into this iframe, due to cross domain policies";
+}
+.attachment_iframe input{
+    display: inline-block;
+    margin-left: 5px;
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color:#444444;
+}
+
+.attachment_iframe .screen_size{
+    width: 80px;
+    text-align: center;
+}
+
+.attachment_iframe .site_url{
+    width: calc(100% - 200px);
+    
+}
+
+.attachment_iframe .frame_container .frame_error{
+    padding-top: 100px;
+}
+.attachment_iframe .frame_container{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 300px;
+}
+.attachment_iframe .button{
+    display: inline-block;
+}
+.attachment_iframe iframe{
+    display: block;
+    min-height: 300px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    border: 0px none;
+    overflow: hidden;
+    z-index: 1;
+}
+.attachment_iframe .background_text{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+
+
+/*Web Capture Styling*/
+
+.attachment_webcapture{
+    display: block;
+    height: auto;
+    margin: 10px;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+}
+.attachment_webcapture .controls{
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+}
+.attachment_webcapture input{
+    display: inline-block;
+    margin-left: 5px;
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color:#444444;
+}
+
+.attachment_webcapture .screen_size{
+    width: 80px;
+    text-align: center;
+}
+
+.attachment_webcapture .site_url{
+    width: calc(100% - 200px);
+    
+}
+
+
+.attachment_webcapture .button{
+    display: inline-block;
+}
+.attachment_webcapture img{
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    height: auto;;
+}
+.attachment_webcapture .background_text{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+/*
+Popup up for Item details
+*/
+
+
+.item_detail .list_note {
+   background: #FFFFFF;
+   border-top: 1px solid #dcdcdc;
+}
+.item_detail .list_note .ql-editor{
+    background: #FFFFFF;
+    display: block;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    background: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #676767;
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+}
+
+.item_detail .txtTitle {
+    width: calc(100% - 210px);
+}
+
+.item_detail .btMore {
+    width: 95px;
+    height: 30px;
+    float: right;
+}
+.item_detail .button_expand {
+    left: 0;
+}
+.item_detail .button_expand .arrow_up2{
+    left: 153px;
+}
+.item_detail .button_expand .expand {
+    left:-115px;
+}
+.item_types {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: left;
+    font-size: 12px;
+    height: 28px;
+    margin-right: 5px;
+    padding-left: 5px;
+    text-align: left;
+    width: 90px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+.item_detail .title_controls {
+    padding-top: 10px;
+    height: 50px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.item_detail .title_controls .txtTitle{
+    text-align: left;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #4d4d57;
+    font-size: 21px;
+    line-height: 25px;
+    padding: 0px 10px;
+
+}
+.item_detail .content {
+    /*max-width: 1400px;*/
+    height: calc(100% - 62px);
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+}
+.item_detail .item_content{
+    display: block;
+    position: relative;
+    width: 65%;
+    height: calc(100% - 45px);
+    overflow: auto;
+    background: #f3f3f3;
+    float: left;
+}
+.item_detail .conversation{
+    display: block;
+    position: relative;
+    width: 35%;
+    height: calc(100% - 45px);
+    overflow: hidden;
+    background: #f3f3f3;
+    float: left;
+}
+
+.item_detail .conversation ul li{
+    float: none;
+}
+
+.item_detail .conversation ul {
+    list-style-type: circle;
+}
+
+
+.item_detail .conversation .content{
+    display: block;
+    position: relative;
+    height: calc(100% - 50px);
+    overflow: auto;
+}
+.item_detail .conversation .content:empty{
+    display: block;
+    height: 100%;
+    min-height: 300px;
+    text-align: center;
+    width: 100%;
+    padding-top:100px;
+    color: #aaaaaa;
+}
+.item_detail .conversation .content:empty:after{
+    content: "To add a note use the field at the bottom of the screen";
+}
+
+.item_detail .conversation .footer{
+    display: block;
+    background: #ffffff
+    border: 1px solid black;
+    width: 100%;
+    min-height: 50px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 10;
+}
+
+.item_detail .conversation .btReply{
+    display: none;
+}
+
+
+
+.item_detail .msg_input .input_text {
+    display: block;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    background: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #676767;
+    height: 30px;
+    padding: 6px 10px 6px;
+    margin:5px;
+    border: 1px solid #dcdcdc;
+    position: relative;
+    width: calc(100% - 10px);
+    -webkit-appearance: none;
+}
+
+
+
+/*AR: Specific to the content type "default" */
+
+.item_default_detail {
+    height: auto;   
+    margin: 10px;
+    background: white;
+}
+
+.item_preview_content:empty{
+    background-color: #ffffff;
+    height:180px !important;
+    width:100%;
+    display: block;
+    color: #a1aec1;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 12px;
+}
+
+.item_text_detail {
+    height: auto;   
+    margin: 10px;
+    background: white;
+}
+
+.item_preview_content.content_text{
+    font-size: 12px;
+    padding-left: 10px;
+    color: #999999;
+}
+.item_preview_content.content_text p{
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.item_preview_content.content_image {
+    display: block;
+    height: auto;
+    width: 320px;
+}
+.item_preview_content.content_webcapture {
+    display: block;
+    height: auto;
+    width: 320px;
+}
+
+.item_recent_activity.default,
+.item_recent_activity.text{
+    border-top: 1px solid #eaeaea;
+}
+
+.item_recent_activity.default:empty,
+.item_recent_activity.text:empty{
+    border-top: 0px none #dddddd;
+}
+
+.item_uiux_preview {
+    display: block;
+    width: 320px;
+    height: auto;
+}
+
+.item_uiux_preview .title{
+    font-size: 18px !important;
+    line-height: 18px !important;
+    padding: 5px 0px 10px 5px !important;
+    left: 0px !important;
+}
+.item_uiux_preview .item_header{
+
+}
+.item_uiux_preview .item_preview_content:empty{
+    background-color: #fdfdfd;
+    height:180px;
+    width:100%;
+    display: block;
+    border: 1px dashed #d3e1f6;
+    color: #a1aec1;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 12px;
+}
+.item_uiux_preview .item_preview_content:empty:after{
+    content: "Add an image";
+
+}
+
+.item_preview_content.content_image .preview_image{
+    display: block;
+    width: 320px;
+    height: 180px;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.item_uiux_preview .content_webcapture:empty:after{
+    content: "Add an image";
+
+}
+
+.item_preview_content.content_webcapture .preview_image{
+    display: block;
+    width: 320px;
+    height: 180px;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.item_uiux_detail {
+    display: block;
+    height: 100%;
+    margin: 0px;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+.item_uiux_detail .uiux_content{
+    display: block;
+    overflow: auto;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+}
+.item_uiux_detail .err_msg{
+    background-color: #ff9900;
+    color:#ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+}
+.item_uiux_detail .uiux_content:empty:after {
+    background: none repeat scroll 0 0 #e3e7ec;
+    border: 2px dashed #b3c1d6;
+    color: #a1aec1;
+    content: "Drag n drop a photo \A or \A tap here to add \A from your device";
+    cursor: pointer;
+    display: block !important;
+    font-size: 16px;
+    font-weight: 600;
+    height: 234px;
+    line-height: 18px;
+    margin: 0;
+    overflow: hidden;
+    padding: 80px 50px 0;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    white-space: pre;
+    width: 100% !important;
+}
+.item_uiux_detail .item_detail_header_controls{
+    text-align: right;
+}
+.item_uiux_detail .item_detail_footer .btAdd{
+    width: 70px;
+    margin: 15px auto;
+}
+
+/*
+place holder for message
+*/
+/* msg_text */
+.msg_text {
+    word-wrap: break-word;
+}
+
+/* msg_input */
+.msg_input {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+}
+
+.msg_input .btPost {
+    height: 30px;
+    line-height: 30px;
+    width: 56px;
+    float: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    background: #00b8f0;
+    border-radius: 0px 5px 5px 0px;
+    margin: 9px 0px 0px 0px;
+    padding: 0px;
+    text-transform: none;
+}
+.msg_input .btPost:after {
+    content: "Post";
+}
+.msg_input .sending {
+    font-size: 17px;
+    color: #7e7e8e;
+    font-weight: 100;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+
+}
+
+.message {
+    width: 100%;
+    display: block;
+    padding-top: 12px;
+    position: relative;
+}
+.message .profile{
+    display: block;
+    margin-left: 45px;
+    text-align: left;
+}
+.message .fullname, .message_reply .fullname {
+    color: #7e7e8d;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: left;
+    max-height: 15px;
+    max-width: 175px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    margin-right: 10px;
+    display: none;
+}
+.message .controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    width: 26px;
+    height: 26px;
+    margin: 0px !important;
+    padding: 0px;
+    z-index: 2;
+}
+.message .content{
+    width: 100%;
+    height: calc(100% - 100px);
+    position: relative;
+    overflow-y: auto;
+    margin-top: 3px;
+
+}
+.message .btReply, .message_reply .btReply {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background: url(/images/btn_reply_small@2x.png) no-repeat center;
+    background-size: 26px 26px;
+    padding: 0px;
+    margin: 0px;
+}
+.message .username, .message_reply .username {
+    color: #a1aec1;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+    max-height: 13px;
+    max-width: 175px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.message .profile img {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+.message .msg_text, .message_reply .msg_text {
+    text-align: left;
+    margin: 4px 20px 0px 48px;
+    max-width: 100%;
+    padding-bottom: 11px;
+    position: relative;
+    word-wrap: break-word;
+    color: #676767;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 15px;
+
+}
+.message .msg_text .username, .message_reply .msg_text .username {
+    font-size: 13.5px;
+    line-height: 15px;
+    display: inline-block;
+    color: #00bf6e;
+    max-height: 15px;
+    margin: 0px 0px -3px 0px;
+}
+
+/*
+Popup for data Entries
+*/
+.list_entry{
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 10px;
+    height: auto;
+    /*
+    margin: 10% auto 50px;
+    max-width: 372px;
+    */
+    margin: 5% auto 50px;
+    max-width: 550px;
+    padding-bottom: 63px;
+    position: relative;
+    width: 75%;
+}
+
+.list_entry :-moz-placeholder {
+    color: #a1aec1;
+}
+.list_entry *::-moz-placeholder {
+    color: #a1aec1;
+}
+.list_entry input {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #676767;
+    display: block;
+    float: left 
+    font-size: 14px;
+    font-weight: normal;
+    height: 30px;
+    margin: 9px 0 0;
+    max-height: 30px;
+    padding: 6px 10px;
+    position: relative;
+    text-shadow: none;
+    text-align: left;
+    margin: 0 0 10px;
+    width: 100%;
+}
+.list_entry.item_new .txtTitle {
+    width: calc(100% - 100px);
+}
+
+
+
+
+.list_entry .content .desc_area{
+    position: relative;
+    display: block;
+}
+.list_entry .content .lblDescription{
+    width: 100%;
+    height:auto;
+    color: #a1aec1;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    line-height: 14px;
+    padding-left: 3px;
+    text-align: left;
+    top: 3px;
+    position: relative;
+}
+.list_entry .content .lblDescription:after {
+ content: "Description";
+}
+.list_entry .content .lblDropzone:before {
+    color: #a1aec1;
+    content: "Photos";
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    line-height: 14px;
+    padding-left: 3px;
+    position: absolute;
+    text-align: left;
+    cursor: pointer;
+    top: 3px;
+}
+.list_entry .content .lblDropzone {
+    clear: both;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 52px;
+}
+.list_entry .content .btAdd:after {
+    content: ""
+}
+.list_entry .content .btAdd {
+    background: url("/images/btn_add_gray_round@2x.png") no-repeat scroll center center / 26px auto rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    height: 26px;
+    margin-top: -5px;
+    position: absolute;
+    width: 26px;
+}
+
+.list_entry .txtDescription {
+    border-radius: 5px;
+    margin: 0 0 10px;
+    max-height: 300px;
+    min-height: 60px;
+    max-width: 100%;
+    padding-right: 50px;
+    width: 100%;
+    resize: vertical;
+}
+.list_entry .text_counter:after {
+    border-bottom: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-radius: 0 0 0 5px;
+    content: " ";
+    height: 24px;
+    left: 5px;
+    position: absolute;
+    top: 4px;
+    width: 40px;
+}
+
+.list_entry .text_counter {
+    border-left: medium none;
+    color: #00bf6e;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    padding-right: 10px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 0px;
+    width: 50px;
+    z-index: 1;
+}
+
+.list_entry textarea {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #676767;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: 66px;
+    line-height: 18px;
+    margin: 9px 0 0;
+    padding: 6px 10px;
+    position: relative;
+    text-shadow: none;
+}
+
+
+.list_entry .header{
+    color: #7e7e8d;
+    font-size: 18px;
+    font-weight: 500;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    width: 100%;
+}
+.list_entry .content {
+    height: auto;
+    padding: 0 10px;
+    width: 100%;
+}
+.list_entry .content .desc_area{
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    margin: 9px 0 10px;
+    display: block;
+    
+}
+.list_entry .content .desc_area .editor_toolbar{
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.list_entry .content .dropzone {
+    background: none repeat scroll 0 0 #fafafa;
+    border: 1px dashed #a1aec1;
+    border-radius: 10px;
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+}
+.list_entry .content .dropzone_preview {
+    background: none repeat scroll 0 0 #fafafa;
+    height: auto;
+    margin: -1px 0 -1px -10px;
+    max-width: calc(100% + 20px);
+    padding: 0 5px;
+    position: relative;
+    text-align: left;
+    width: calc(100% + 20px);
+}
+.list_entry .content .dropzone.dz-clickable .dz-default.dz-message {
+    color: #a1aec1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    margin: 30px auto 0;
+    text-align: center;
+    width: 79px;
+}
+
+.list_entry .btDone {
+    background: none repeat scroll 0 0 #00b8f0;
+    border-radius: 0 0 10px 10px;
+    bottom: -1px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    height: 46px;
+    line-height: 46px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.list_entry .btDone:after {
+    content: "Done";
+    display: block;
+    width: 100%;
+}
+.item_new .header:after{
+    content: "New Item";
+    display: block;
+    width: 100%;
+}
+.list_new .header:after{
+    content: "New List";
+    display: block;
+    width: 100%;
+}
+
+/*AR Simple
+CSS override to make things more simple for now 
+*/
+.list_preview{
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.list_preview .controls .btAdd{
+    display: none;
+}
+.list_preview .items_wrp .items{
+    background-color: transparent;
+}
+

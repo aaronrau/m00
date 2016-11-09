@@ -1,0 +1,15 @@
+<script>
+
+      Parse.initialize("{{KEYS.APP_ID}}", "{{KEYS.JAVA_SCRIPT}}");
+      Parse.serverURL = '/parse';
+
+      app.Start({login:{google:true,facebook:true,twitter:true,isOAuthOnly:true},sections:{}},function(){
+
+		app.User.become("{{auth.sessionToken}}","{{error}}");
+
+      });
+
+</script>
+<body class='auth'>
+	<div class='background_text'>Setting up your account ...</div>
+</body>

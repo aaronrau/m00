@@ -1,0 +1,12 @@
+<script>
+    
+  Parse.initialize("{{KEYS.APP_ID}}", "{{KEYS.JAVA_SCRIPT}}");
+  Parse.serverURL = '/parse';
+
+  app.Start({login:{google:true,facebook:true,twitter:true,isOAuthOnly:true},sections:{}});
+
+</script>
+<body class='auth_error'>
+	<div class='background_text'><h1>OOPS!</h1><p>There was a problem creating your account. Please try again.<p></div>
+	<div class="button btTryAgain" onclick="startLogin();">Try Again</div>
+</body>

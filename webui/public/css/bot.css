@@ -1,0 +1,139 @@
+.notification {
+    height: 100px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding-top: 65px;
+}
+
+.bot   {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+
+}
+
+.bot  .chatroom {
+	display: block;
+	height: auto;
+	position: relative;
+	width: 100%;
+	
+}
+
+.bot  .chatroom_status {
+	text-align: center;
+	background-color: #FF0000;
+	color: #FFFFFF;
+	line-height: 50px;
+}
+.bot  .chatroom_users {
+	text-align: left;
+	background-color: #888888;
+	color: #FFFFFF;
+	height: 50px;
+
+}
+
+.bot .chatroom_user {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+
+	border: solid 1px #FFFFFF;
+	border-radius: 20px;
+	margin: 5px;
+	background: url("/images/profile_default.png") no-repeat scroll center center / 40px 40px;
+	
+}
+
+.bot .chatroom_content {
+	height: auto;
+	display: block;
+	width: 100%;
+	color: #888888;
+
+	line-height: 20px;
+	font-size: 17px;
+	font-weight: 100;
+	padding: 10px;
+	padding-bottom: 110px;
+}
+
+
+.bot .chatroom_content .message{
+	color: #333333;
+}
+
+.bot .chatroom_content .message_bot{
+	padding-left: 20px;
+}
+
+.bot .chat_input {
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 110px;
+	background-color: #99ccff;
+	border-top: solid 1px #99ccff;
+	padding-left: 10px;
+}
+
+.bot .chat_input .input_text {
+	display: inline;
+	box-shadow: none;
+	text-shadow: none;
+	border: 0;
+	background: #ffffff;
+	border-radius: 5px 0px 0px 5px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #676767;
+	width: calc(100% - 130px);
+	height: 30px;
+	padding: 6px 10px 6px;
+	margin: 9px 0px 0px;
+	border: 1px solid #dcdcdc;
+	position: relative;
+	-webkit-appearance: none;
+}
+.bot .chat_input .btPost {
+    height: 30px;
+    line-height: 30px;
+    width: 56px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    background: #00b8f0;
+    border: solid 1px #00b8f0;
+    border-radius: 0px 5px 5px 0px;
+    margin: 9px 0px 0px 0px;
+    text-transform: none;
+    display: inline;
+}
+.bot .chat_input .btPost:after {
+	content: "Send";
+}
+.bot .chat_input .sending {
+	font-size: 17px;
+	color: #7e7e8e;
+	font-weight: 100;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+
+}
+.controls_footer {
+	display: none;
+}
+@media all and (min-width: 770px) {
+	.controls_footer {
+		display: block;
+	}
+}
